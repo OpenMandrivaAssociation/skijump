@@ -63,7 +63,6 @@ EOF
 install -d %{buildroot}%{_datadir}/applications
 cat <<EOF > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop
 [Desktop Entry]
-Encoding=UTF-8
 Name=%{Summary}
 Comment=%{Summary}
 Exec=%{_gamesbindir}/%{name}
