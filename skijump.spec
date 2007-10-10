@@ -66,7 +66,7 @@ cat <<EOF > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop
 Name=%{Summary}
 Comment=%{Summary}
 Exec=%{_gamesbindir}/%{name}
-Icon=sport_section.png
+Icon=sport_section
 Terminal=false
 Type=Application
 StartupNotify=true
