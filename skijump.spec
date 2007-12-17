@@ -22,7 +22,6 @@ Group:		Games/Arcade
 Summary:	%{Summary}
 BuildRequires:  allegro-devel
 BuildRequires:	automake autoconf
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 A clone of Deluxe Ski Jump
