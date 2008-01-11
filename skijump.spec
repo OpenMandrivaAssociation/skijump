@@ -48,16 +48,6 @@ autoconf
 rm -rf %{buildroot}
 %makeinstall_std
 
-install -d %{buildroot}%{_menudir}
-cat <<EOF > %{buildroot}%{_menudir}/%{name}
-?package(%{name}):command="%{_gamesbindir}/%{name}" \
-		icon="sport_section.png" \
-		needs="x11" \
-		section="More Applications/Games/Sports" \
-		title="%{Summary}"\
-		longtitle="%{Summary}" \
-		xdg="true"
-EOF
 
 install -d %{buildroot}%{_datadir}/applications
 cat <<EOF > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop
@@ -92,7 +82,6 @@ rm -rf %{buildroot}
 #%{_iconsdir}/%{name}.png
 #%{_liconsdir}/%{name}.png
 #%{_miconsdir}/%{name}.png
-%{_menudir}/%{name}
 %{_datadir}/applications/mandriva-%{name}.desktop
 %attr(4755,games,games) %{_gamesbindir}/*
 %dir %attr(0775,games,games) %{_localstatedir}/games/%{name}
