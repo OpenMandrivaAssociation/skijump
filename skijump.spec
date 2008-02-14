@@ -19,6 +19,7 @@ Patch2:		skijump-0.2.0-fix-vardir.patch
 Patch3:		skijump-0.2.0-allegro-4.2.patch
 License:	GPL
 Group:		Games/Arcade
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Summary:	%{Summary}
 BuildRequires:  allegro-devel
 BuildRequires:	automake autoconf
