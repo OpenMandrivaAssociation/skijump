@@ -85,8 +85,8 @@ rm -rf %{buildroot}
 #%{_miconsdir}/%{name}.png
 %{_datadir}/applications/mandriva-%{name}.desktop
 %attr(4755,games,games) %{_gamesbindir}/*
-%dir %attr(0775,games,games) %{_localstatedir}/games/%{name}
-%dir %attr(0775,games,games) %{_localstatedir}/games/%{name}/replays
-%attr(0664,games,games) %{_localstatedir}/games/%{name}/*.txt
-%attr(0664,games,games) %{_localstatedir}/games/%{name}/replays/*.rpl
+%dir %attr(0775,games,games) %{_localstatedir}/lib/games/%{name}
+%dir %attr(0775,games,games) %{_localstatedir}/lib/games/%{name}/replays
+%attr(0664,games,games) %{_localstatedir}/lib/games/%{name}/*.txt
+%attr(0664,games,games) %{_localstatedir}/lib/games/%{name}/replays/*.rpl
 
