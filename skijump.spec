@@ -17,8 +17,9 @@ Patch0:		skijump-0.2.0-compile-fix.patch
 Patch1:		skijump-0.2.0-fix-install-as-non-root.patch
 Patch2:		skijump-0.2.0-fix-vardir.patch
 Patch3:		skijump-0.2.0-allegro-4.2.patch
-License:	GPL
-Group:		Games/Arcade
+Patch4:		skijump-0.2.0-compile-fix-2.patch
+License:	GPLv2
+Group:		Games/Sports
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Summary:	%{Summary}
 BuildRequires:  allegro-devel
@@ -33,6 +34,7 @@ A clone of Deluxe Ski Jump
 %patch1 -p0
 %patch2 -p0
 %patch3 -p1
+%patch4 -p1
 
 aclocal
 automake --add-missing --copy --foreign
@@ -89,8 +91,8 @@ rm -rf %{buildroot}
 #%{_miconsdir}/%{name}.png
 %{_datadir}/applications/mandriva-%{name}.desktop
 %attr(4755,games,games) %{_gamesbindir}/*
-%dir %attr(0775,games,games) %{_localstatedir}/lib/games/%{name}
-%dir %attr(0775,games,games) %{_localstatedir}/lib/games/%{name}/replays
-%attr(0664,games,games) %{_localstatedir}/lib/games/%{name}/*.txt
-%attr(0664,games,games) %{_localstatedir}/lib/games/%{name}/replays/*.rpl
+%dir %attr(0775,games,games) %{_localstatedir}/games/%{name}
+%dir %attr(0775,games,games) %{_localstatedir}/games/%{name}/replays
+%attr(0664,games,games) %{_localstatedir}/games/%{name}/*.txt
+%attr(0664,games,games) %{_localstatedir}/games/%{name}/replays/*.rpl
 
