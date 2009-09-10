@@ -1,6 +1,6 @@
 %define	name	skijump
 %define	version	0.2.0
-%define	rel	9
+%define	rel	10
 %define release %mkrel %rel
 
 %define	Summary	Open Ski Jumping
