@@ -1,0 +1,11 @@
+--- configure.ac.orig	2005-07-26 16:08:00.409832654 +0200
++++ configure.ac	2005-07-26 16:18:56.366576660 +0200
+@@ -69,7 +69,7 @@
+ 	AC_SUBST(prefix)
+ fi
+ skijumpdatadir=${prefix}/share/games/skijump
+-skijumpcfgdir=/var/games/skijump
++skijumpcfgdir=${localstatedir}/games/skijump
+ skijumpreplaydir=${skijumpcfgdir}/replays
+ #AC_DEFINE_UNQUOTED([DATADIR], [$skijumpdatadir],
+ #		   [Define to the read-only architecture-independent data directory.])

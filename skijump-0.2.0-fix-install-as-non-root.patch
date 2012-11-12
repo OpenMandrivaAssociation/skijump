@@ -1,0 +1,11 @@
+--- Makefile.am.orig	2005-07-26 15:33:25.258521836 +0200
++++ Makefile.am	2005-07-26 15:33:14.275172192 +0200
+@@ -5,7 +5,4 @@
+ CPPFLAGS += -DDATADIR=\"${skijumpdatadir}/\" -DCFGDIR=\"${skijumpcfgdir}/\" -DREPLAYDIR=\"${skijumpreplaydir}/\"
+ 
+ install-data-local:
+-	chgrp games ${execprefix}${bindir}/skijump
+-	chmod g+s ${execprefix}${bindir}/skijump
+-	chgrp -R games ${skijumpcfgdir}
+-	chmod -R g+rw ${skijumpcfgdir}
++

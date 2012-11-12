@@ -1,0 +1,35 @@
+Index: skijump-0.2.0/api.cpp
+===================================================================
+--- skijump-0.2.0/api.cpp
++++ skijump-0.2.0/api.cpp	2009-05-15 23:32:17.000000000 +0200
+@@ -23,7 +23,7 @@
+ 	drawing_mode(DRAW_MODE_TRANS,NULL,0,0);
+ 	set_trans_blender(0,0,0,128);	
+ 	rectfill(screen,(SCREEN_W-length)/2,(SCREEN_H-40)/2,(SCREEN_W+length)/2,(SCREEN_H+40)/2,-1);
+-	textprintf_centre(screen,font,SCREEN_W/2,SCREEN_H/2-5,0,buf);
++	textprintf_centre(screen,font,SCREEN_W/2,SCREEN_H/2-5,0,"%s", buf);
+ 	readkey();
+ 	drawing_mode(DRAW_MODE_SOLID,NULL,0,0);
+ 	blit(tmpbmp,screen,0,0,(SCREEN_W-length)/2,(SCREEN_H-40)/2,length,40);
+@@ -50,7 +50,7 @@
+ 		blit(tmpbmp,screen_bufor,0,0,(SCREEN_W-max_length)/2,(SCREEN_H-40)/2,max_length+1,61);
+ 
+ 		rectfill(screen_bufor,(SCREEN_W-length)/2,SCREEN_H/2-20,(SCREEN_W-length)/2+length,(SCREEN_H+80)/2,-1);
+-		textprintf_centre(screen_bufor,font,SCREEN_W/2,SCREEN_H/2-5,0,buf);
++		textprintf_centre(screen_bufor,font,SCREEN_W/2,SCREEN_H/2-5,0,"%s", buf);
+ 		textprintf_centre(screen_bufor,font,SCREEN_W/2,SCREEN_H/2+15,0,"%s%s",in,suf);
+ 		blit(screen_bufor,screen,0,0,0,0,SCREEN_W,SCREEN_H);
+ 
+Index: skijump-0.2.0/main.cpp
+===================================================================
+--- skijump-0.2.0/main.cpp
++++ skijump-0.2.0/main.cpp	2009-05-15 23:31:02.000000000 +0200
+@@ -487,7 +487,7 @@
+ 	destroy_zbuffer(zbuf1);
+ 	return result_p;
+ }
+-int main(int *argc, char *argv[]){
++int main(int argc, char *argv[]){
+ //	BITMAP *hill_tlo;
+ //	PALETTE pal;
+ //	alarm(5);
