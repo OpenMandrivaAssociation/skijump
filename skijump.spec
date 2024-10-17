@@ -8,7 +8,7 @@
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-URL:		http://skijump.sourceforge.net/	
+URL:		https://skijump.sourceforge.net/	
 Source0:	http://prdownloads.sourceforge.net/skijump/%{name}-%{version}.tar.bz2
 #Source11:	%{name}-16x16.png
 #Source12:	%{name}-32x32.png
