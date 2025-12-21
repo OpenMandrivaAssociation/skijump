@@ -22,6 +22,8 @@ License:	GPLv2
 Group:		Games/Sports
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Summary:	%{Summary}
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:  allegro-devel
 BuildRequires:	automake autoconf
 
